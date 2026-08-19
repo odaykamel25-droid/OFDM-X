@@ -1,0 +1,16 @@
+REAL PAPR / COMPLEXITY BENCHMARK
+========================================================================================
+N=64, CP=16, BPSK, symbols=4000, L=1
+SLM candidates=4; PTS subblocks=4; PTS combinations=64; companding mu=255.0
+
+Conventional OFDM        PAPR=6.1918 dB  Improvement=0.0000 dB  Time=0.003574 ms/waveform  FLOPs~1920
+SLM                      PAPR=5.7420 dB  Improvement=0.4498 dB  Time=0.019918 ms/waveform  FLOPs~7680
+PTS                      PAPR=4.7205 dB  Improvement=1.4713 dB  Time=0.268160 ms/waveform  FLOPs~11776
+DCT spreading            PAPR=3.8165 dB  Improvement=2.3753 dB  Time=0.001661 ms/waveform  FLOPs~10112
+WHT spreading            PAPR=4.8244 dB  Improvement=1.3673 dB  Time=0.004141 ms/waveform  FLOPs~2304
+Companding               PAPR=1.6484 dB  Improvement=4.5433 dB  Time=0.003977 ms/waveform  FLOPs~2432
+FCAE / OFDM-X            PAPR=5.9970 dB  Improvement=0.1940 dB  Time=2.817000 ms/waveform  FLOPs~294912
+
+Notes:
+DCT/WHT are generic transform-spreading baselines on OFDM, not a reproduction of AFDM/OCDM Ref. [5].
+FCAE values are established project measurements, not remeasured in this baseline-only script.
